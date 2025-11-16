@@ -1,0 +1,57 @@
+Creating a new branch from git and setting the upsteam pushes and pulls to github
+
+1. Git checkout -b new_branch
+2. Make commits
+3. Git remote -v  ***** shows all pull/push places. 
+4. Important to show where origin is, 
+5. Can add new handles like origin and upstream with git remote add origin git@github.com:epea_ou/2025_Bi621.git
+6. When using -u like below, it adds new branch to the origin Github repo
+7. Git pull works the same, but the Github branch needs to be specified
+8. Git push -u origin new_branch
+9. Git pull origin new_branch
+
+Deleting a branch from git after pull request
+1. Git checkout main
+2. Git branch -d branch_name  
+
+Tie new Git Repository to a github
+1. git init
+2. echo "stuff" >> README.md
+3. git add README.md
+4. Make commit with readme (or any files already are have been created)
+5. git branch -M main
+6. Make a repository on github account
+7. git remote add origin [git@github.com](mailto:git@github.com):epea_ou/<GITHUB REPO NAME>.git
+8. git push -u origin main
+
+OR TO ADD AN EXISTING GIT 
+1. git remote add origin git@github.com:epea_ou/<GITHUB REPO NAME>.git
+2. git branch -M main
+3. git push -u origin main
+
+Loading a github branch to git
+1. Git fetch    - catches up with github
+2. Git branch -a   -list all branches
+3. git checkout -b feature-branch origin/feature-branch -checkout branch
+4. git push -u origin feature-branch
+5. Git pull origin feature-branch
+
+Merge main into a feature branch to keep it updated
+1. Git checkout main      - Update main branch
+2. Git pull origin main
+3. Git checkout feature-branch
+4. Git merge main
+5. In the file with conflicts, it will be commented your changes vs the main commits, manually edit in visual editor 
+
+Reloading a past main version
+
+1. git log --first-parent main   -find hash commit you want to reload
+2. Git reset –hard <commit-hash>
+3. Or can make a test branch
+4. git checkout -b test-old-version <commit-hash>
+
+5. If reset main, reload the up to date one with: git fetch origin, git reset --hard origin/main
+
+
+
+
