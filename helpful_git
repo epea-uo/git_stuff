@@ -37,7 +37,7 @@ Loading a github branch to git
 5. Git pull origin feature-branch
 
 Merge main into a feature branch to keep it updated
-1. Git checkout main      - Update main branch
+1. Git checkout main - Update main branch
 2. Git pull origin main
 3. Git checkout feature-branch
 4. Git merge main
