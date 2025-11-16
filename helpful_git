@@ -51,7 +51,3 @@ Reloading a past main version
 4. git checkout -b test-old-version <commit-hash>
 
 5. If reset main, reload the up to date one with: git fetch origin, git reset --hard origin/main
-
-
-
-
